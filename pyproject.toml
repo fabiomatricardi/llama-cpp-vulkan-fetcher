@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama-cpp-vulkan-fetcher"
+version = "0.1.0"
+description = "Download and extract the latest llama.cpp Windows Vulkan x64 binaries"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "requests>=2.31",
+]
+
+[project.scripts]
+llama-cpp-vulkan-fetcher = "llama_cpp_vulkan_fetcher.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
